@@ -8,7 +8,6 @@ ADD db.ldif /tmp/
 ADD start_slapd.sh /usr/local/bin/start_slapd
 RUN mkdir /var/run/ldap
 
-VOLUME /var/lib/ldap
 EXPOSE 389 636
 
 ENTRYPOINT ["/usr/local/bin/start_slapd", "-h ldapi:/// ldap:/// ldaps:///"]
